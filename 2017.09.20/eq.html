@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		p{
+			float:left;
+			margin-right:10px;
+			width:100px;
+			height:100px;
+			border:1px solid red;
+		}
+		/*.teshu{
+			background:red;
+			width:100px;
+			height:100px;
+		}*/
+	</style>
+</head>
+<body>
+	<div class="box1">
+		<p></p>
+		<p class="teshu"></p>
+		<p class="teshu"></p>
+		<p></p>
+	</div>
+	<div class="box2">
+		<p class="teshu"></p>
+		<p class="teshu">我想学好js</p>
+		<p></p>
+		<p></p>
+	</div>
+	<script src="js/jquery-3.2.1.js"></script>
+	<script>
+		//$(".box2 p").eq(1);
+     	//$("p").eq(5)
+     	$(".box2 .teshu").eq(1).css("background","red")
+	</script>
+</body>
+</html>

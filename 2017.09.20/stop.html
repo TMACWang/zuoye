@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+    div {
+      width: 100px;
+      height: 100px;
+      background-color: orange;
+      left: 100px;
+      top: 100px;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <button>stop()</button>
+  <button>stop(true)</button>
+  <button>stop(true,true)</button>
+  <button>stop(false, true)</button>
+  <button>finish()</button>
+  <div></div>
+  <script src="js/jquery-3.2.1.js"></script>
+  <script>
+  	$('div').animate({left: 800}, 2000);
+    $('div').animate({top: 300}, 2000);
+    $('div').animate({left: 100}, 2000);
+    $('div').animate({top: 100}, 2000);
+    $("button:eq(0)").click(function(){
+    	$('div').stop();//立即停止当前的动画 执行下面的语句
+    })
+    $("button:eq(1)").click(function(){
+    	$('div').stop(true);//立即停止当前东动画 清除队列 盒子留在当前位置
+    })
+    $("button:eq(2)").click(function(){
+    	$('div').stop(true,true);//瞬间完成当前的动画 并且清除队列
+    })
+    $("button:eq(3)").click(function(){
+    	$('div').stop(false,true);//立即完成当前东动画 继续完成剩下的动画
+    })
+    $("button:eq(4)").click(function(){
+    	$('div').finish();//瞬间完成所有的动画
+    })
+  </script>
+</body>
+</html>

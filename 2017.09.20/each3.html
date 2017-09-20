@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    table,td{
+      border: 1px solid #000;
+    }
+    td {
+      width: 120px;
+      height: 40px;
+    }
+  </style>
+</head>
+<body>
+	<table>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+  <script src="js/jquery-3.2.1.js"></script>
+  <script>
+  	/*$("tr:odd").each(function(){
+  		$(this).css("background","red")
+  	})
+  	$("tr:even").each(function(){
+  		$(this).css("background","blue")
+  	})
+  	$("td:even").each(function(){
+  		$(this).css("background","yellow")
+  	})
+  	$("td:odd").each(function(){
+  		$(this).css("background","greenyellow")
+  	})
+  	*/
+  	//get()和eq()方法是类似的 只不过是前者是js原生 返回的是原生  因此方法也是原生方法 而eq()返回的是对象，所以用jquery方法
+  	$("tr").get(1).style.backgroundColor = 'green';
+  </script>
+</body>
+</html>

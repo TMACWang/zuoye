@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		div{
+			width:100px;
+			height:300px;
+			background:blue;
+			/*display:none;*/
+		}
+	</style>
+</head>
+<body>
+	
+	<button>下拉</button>
+	<button>上啦</button>
+	<button>toggle</button>
+	<button>fadein</button>
+	<button>fadeout</button>
+	<button>fadeTo</button>
+	<button>fadetoggle</button>
+	<div></div>
+</body>
+<script src="js/jquery-3.2.1.js"></script>
+<script>
+//	$("button:eq(0)").click(function(){
+//		$("div").slideDown();
+//	})
+//	$("button:eq(1)").click(function(){
+//		$("div").slideUp();
+//	})
+//	$("button:eq(2)").click(function(){
+//		$("div").toggle(1000);
+//	})
+
+
+    $("button:eq(3)").click(function(){
+    	$("div").fadeIn();
+    })
+    $("button:eq(4)").click(function(){
+    	$("div").fadeOut(2000);
+    })
+    $("button:eq(5)").click(function(){
+    	$("div").fadeTo(2000,0.5,function(){
+    		alert("nihao")
+    	});
+    })
+    $("button:eq(6)").click(function(){
+    	$("div").fadeToggle(2000);
+    })
+</script>
+</html>

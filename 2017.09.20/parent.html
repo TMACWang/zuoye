@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+<style>
+.choose {
+      background-color: yellowgreen;
+    }
+  </style>
+</head>
+<body>
+  <div class="form">
+    <ul>
+      <li><input type="checkbox"> content</li>
+      <li><input type="checkbox"> content</li>
+      <li><input type="checkbox"> content</li>
+      <li><input type="checkbox"> content</li>
+      <li><input type="checkbox"> content</li>
+    </ul>
+  </div>
+  <script src="js/jquery-3.2.1.js"></script>
+  <script>
+  	$("input[type=checkbox]").click(function(){
+  		//if($(this).is(":checked"))
+  		if($(this)[0].checked){
+  			$(this).parent().addClass("choose");
+  		}else{
+  			$(this).parent().removeClass("choose");
+  		}
+  	})
+  </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+    div {
+      width: 200px;
+      height: 400px;
+      background-color: black;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <button>fadeIn</button>
+  <button>fadeOut</button>
+  <button>fadeTo</button>
+  <button>fadeToggle</button>
+  <div></div>
+  <script src="js/jquery-3.2.1.js" charset="utf-8"></script>
+  <script>
+  	$("button:eq(0)").click(function(){
+  		$("div:first").fadeIn(1000);
+  	})
+  	$("button:eq(1)").click(function(){
+  		$("div:first").fadeOut(1000);
+  	})
+  	$('button:eq(3)').click(function(){
+      $("div:first").fadeToggle(600);
+    });
+  </script>
+</body>
+</html>

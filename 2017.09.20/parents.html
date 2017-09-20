@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+<style>
+    p {
+      width: 40px;
+      height: 40px;
+      background-color: #ccc;
+    }
+</style>
+</head>
+<body>
+  <div id="box">
+    <ul>
+      <li> <p></p> </li>
+      <li> <p></p> </li>
+      <li> <p></p> </li>
+      <li> <p></p> </li>
+      <li> <p></p> </li>
+    </ul>
+  </div>
+  <script src="js/jquery-3.2.1.js"></script>
+  <script>
+  	//$("p").parents().css("background","blue");
+  	$("p").parents("li").css("background","red");
+  </script>
+</body>
+</html>

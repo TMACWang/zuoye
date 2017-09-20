@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		#box{
+		width:100px;
+		height:250px;
+		background:blue;
+		display:none;
+	    }
+	</style>
+</head>
+<body>
+	<button>toggle</button>
+	<button>toggle 动画</button>
+	<button>show</button>
+	<button>hide</button>
+	<div id="box"></div>
+	<script src="js/jquery-3.2.1.js"></script>
+	<script>
+		$("button:eq(0)").click(function(){
+			$("#box").toggle();
+		});
+		$("button:eq(1)").click(function(){
+			$("#box").toggle(1000);
+		});
+		$("button:eq(2)").click(function(){
+			$("#box").show(1000);
+		});
+		$("button:eq(3)").click(function(){
+			$("#box").hide(1000);
+		});
+	</script>
+</body>
+</html>
