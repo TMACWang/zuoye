@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		.correct{
+			color:green;
+		}
+		.err{
+			color:red;
+		}
+	</style>
+</head>
+<body>
+	用户名:<input type="text">
+	<span class="msg"></span>
+	<script src="js/jquery-3.2.1.js"></script>
+	<script>
+		$("input").blur(function(){
+			$.post("http://h6.duchengjiu.top/shop/api_user.php",
+			{status:"check",username:$(this).val()},function(json){
+				console.log(json);
+				if(json.code===2001){
+					$(".msg").html("用户名以存在").removeClass("correct").addClass("err");
+				}else{
+					$(".msg").html("用户名可以正常注册").removeClass("err").addClass("correct");
+				}
+			})
+		})
+	</script>
+</body>
+</html>

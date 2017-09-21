@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<form action="">
+	<input type="text" name="username"/>
+	<input type="password" name="password"/>
+	<input type="checkbox" name="hobby" value="1"/>吃饭
+	<input type="radio" name="sex" value="2"/>男
+	<select name="city">
+		<option value="">北京</option>
+		<option value="上海">上海</option>
+		<option value="">广州</option>
+		<option value="">深圳</option>
+	</select>
+	<textarea name="desc" rows="" cols=""></textarea>
+	</form>
+	<input type="submit" />
+	<script src="js/jquery-3.2.1.js"></script>
+	<script>
+		$("input[type=submit]").click(function(){
+			console.log($("form").serialize());
+			console.log($("form").serializeArray());
+			 var arr = $('form').serializeArray();
+			 console.log(arr);
+             var obj = {};
+             for (var i = 0; i < arr.length; i++) {
+                  obj[arr[i].name] = arr[i].value;//obj[arr[i].name]是表示obj.name
+                 }
+             console.log(obj);
+		})
+	</script>
+</body>
+</html>

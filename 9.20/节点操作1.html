@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<div id="box"><h2>1</h2></div>
+	<script src="js/jquery-3.2.1.js"></script>
+	<script>
+		//追加元素
+		$("#box").append("<p>你好</p>");
+		$("#box").prepend("<p>你们好</p>");
+		//创建元素
+		var $p=$("<p></p>");
+		$p.html("fuck").css("color","red");
+		$("#box").append($p);
+		//将子元素追加到父元素
+		$("<p>张三</p>").appendTo("#box");
+		$("<p>张三</p>").appendTo($("#box"));
+		//将子元素添加到父元素的开头
+		$("<p>李四</p>").prependTo("#box");
+		$("<p>李四</p>").prependTo($("#box"));
+	</script>
+</body>
+</html>
